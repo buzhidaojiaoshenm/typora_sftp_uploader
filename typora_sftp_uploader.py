@@ -83,7 +83,7 @@ try:
 
         # 生成Markdown格式链接
         relative_path = remote_image_path.replace(REMOTE_PATH, "").lstrip("/")
-        markdown_link = f"{BASE_URL}{relative_path.replace('\\', '/')}"
+        markdown_link = f"{BASE_URL}{relative_path.replace('\\', '/').replace(' ', '%20')}"
         upload_results.append(markdown_link)
 
 except Exception as e:
